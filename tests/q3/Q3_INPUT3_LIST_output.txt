@@ -1,0 +1,5 @@
+1: Insert an integer into the binary search tree;
+2: Print the post-order traversal of the binary search tree;
+0: Quit;
+Please input your choice(1/2/0): Input an integer that you want to insert into the Binary Search Tree: Please input your choice(1/2/0): The resulting post-order traversal of the binary search tree is: 50
+Please input your choice(1/2/0): 

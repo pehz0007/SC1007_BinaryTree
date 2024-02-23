@@ -9,6 +9,6 @@ function(CREATE_TEST TEST_NAME)
 endfunction()
 
 
-#create_test(Q1_INPUT1_LIST)
-#create_test(Q1_INPUT2_LIST)
-#create_test(Q1_INPUT3_LIST)
+create_test(Q4_INPUT1_LIST)
+create_test(Q4_INPUT2_LIST)
+create_test(Q4_INPUT3_LIST)

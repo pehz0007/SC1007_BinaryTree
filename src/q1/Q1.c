@@ -110,12 +110,10 @@ int main()
 
 int identical(BTNode *tree1, BTNode *tree2)
 {
-
     if(tree1 == NULL || tree2 == NULL)return 1;
 
     Stack stack;
     stack.top = NULL;
-
 
     BTNode* node1 = tree1;
     BTNode* node2 = tree2;
@@ -129,15 +127,12 @@ int identical(BTNode *tree1, BTNode *tree2)
         if(node1->item != node2->item) {
             return 0;
         }
-
         if(node1->right != NULL && node2->right != NULL){
             push(&stack, node1->right);
             push(&stack, node2->right);
         }else if(!(node1->right == NULL && node2->right == NULL)){
             return 0;
         }
-
-
         if(node1->left != NULL && node2->left != NULL){
             push(&stack, node1->left);
             push(&stack, node2->left);

@@ -39,6 +39,7 @@ void removeAll(BSTNode **node);
 
 int main()
 {
+    setbuf(stdout, 0);
 	int c, i;
 	c = 1;
 
@@ -85,7 +86,27 @@ int main()
 
 void postOrderIterativeS1(BSTNode *root)
 {
-	 /* add your code here */
+	 Stack stack;
+     stack.top = NULL;
+     BSTNode* curNode = root;
+
+    do{
+        if(curNode != NULL){
+            if(curNode->right != NULL) push(&stack, curNode->right);
+            push(&stack, curNode);
+            curNode = curNode->left;
+        }else{
+            BSTNode* tmpNode = pop(&stack);
+            if(tmpNode->right != NULL && stack.top != NULL && tmpNode->right == stack.top->data){
+                pop(&stack);
+                push(&stack, tmpNode);
+                curNode = tmpNode->right;
+            }else {
+                printf("%d ", tmpNode->item);
+                curNode = NULL;
+            }
+        }
+    }while(stack.top != NULL);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
